@@ -20,6 +20,7 @@
 - [Step 4 — Build with your agent](#step-4--build-with-your-agent)
 - [Step 5 — Submit](#step-5--submit)
 - [Step 6 — Track it and claim](#step-6--track-it-and-claim)
+- [Tips that save you a rejection](#tips-that-save-you-a-rejection)
 - [Why entries carry transcripts](#why-entries-carry-transcripts)
 - [Get your own referral link](#get-your-own-referral-link)
 - [FAQ](#faq)
@@ -142,6 +143,16 @@ node cli/makefun.mjs claim --claim <claim-id> \
 ```
 
 Say `yes` for `--us-person` if you are a US person. The reward arrives in USDC on Solana after an automatic sanctions screen. A tax form is asked only where US law requires one.
+
+## Tips that save you a rejection
+
+These are the misses that cost first-time entrants a submission slot:
+
+- **Start a fresh agent session after the bounty opens.** A session from before the opening cannot be entered, even if the build continued after it.
+- **Let the agent write, don't paste.** Lines your agent typed in-session count as authored; lines pasted from elsewhere count as copied, and too much copied content fails the transcript gate.
+- **Run `check` before every submit.** It is the same gate the server runs, and it names the fix for each failure. A rejected submission still burns one of the day's slots.
+- **Keep the repository public and the commit fixed.** The entry snapshots one commit; later pushes do not change it, but making the repo private (or renaming it without a redirect) can disqualify it at the final re-check.
+- **Mind the daily limit.** Most bounties allow a few submissions a day, with a hard cap overall — `status --competition <slug>` shows what you have left. Save a slot for a fix-up resubmission near the deadline.
 
 ## Why entries carry transcripts
 
